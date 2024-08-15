@@ -1,0 +1,55 @@
+.note {
+    position: fixed;
+    padding: 30px;
+    top: 400px;
+    left: 400px;
+    border-radius: 50px;
+    height: 100%;
+    width: 300px;
+    background-color: rgb(220, 229, 222);
+}
+
+.note--hidden {
+    display: none;
+}
+
+.note-text {
+    position: relative;
+    background-color: rgba(146, 189, 134, 0.326);
+    padding: 20px;
+    height: 200px;
+    margin-right: 50px;
+    resize: vertical;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(64, 88, 60);
+    border: none;
+}
+
+.note-text::placeholder {
+    font-weight: bold;
+    opacity: 0.5;
+    color: rgb(132, 132, 132);
+    font-style: italic;
+}
+
+.note-text:focus {
+    border-style: none;
+}
+
+.pop-leaf,
+.snip-leaf,
+.flag-leaf {
+    margin-top: 10px;
+    margin-right: 5px;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: rgb(64, 88, 60);
+    border-color: rgb(64, 88, 60);
+    border-style: solid;
+}
+
+.pop-leaf--hidden {
+    display: none;
+}

@@ -1,0 +1,197 @@
+.pot {
+  position: fixed;
+  top: 0px;
+  right: 100px;
+  width: 200px;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: auto;
+}
+
+.set--hidden {
+  display: none;
+}
+
+#potImage {
+  position: relative;
+  width: 100%;
+}
+
+#addLeaf {
+  position: absolute;
+  bottom: 50px;
+  right: 80px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  color: #f8d2b9;
+  text-align: centre;
+  border-radius: 50%;
+  border-width: 0px;
+  background-color: #cf946e;
+}
+
+#addLeaf:hover {
+  background-color: #bb784e;
+  color: #ffefe5;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+#addLeaf:active {
+  background-color: #e1cdc1;
+  color: #ffffff;
+  transition: 0.4s;
+}
+
+.left-leaf {
+  background-color: #758f68;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+  transform: rotate(-20deg);
+  height: 50px;
+  width: 60px;
+  position: relative;
+  left: 30px;
+  text-align: center;
+  border-width: 0;
+}
+
+.left-leaf:hover {
+  cursor: pointer;
+}
+
+.open-left-leaf {
+  background: radial-gradient(farthest-corner at 15px 15px, rgb(195, 204, 149) 10%, rgb(117, 143, 104, 1) 90%);
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+  transform: rotate(-20deg);
+  height: 50px;
+  width: 60px;
+  position: relative;
+  left: 30px;
+  text-align: center;
+  border-width: 0;
+  cursor: pointer;
+}
+
+.snipped-left-leaf {
+  background-color: rgb(117, 143, 104);
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  transform: scaleX(-1) rotate(-60deg);
+  height: 15px;
+  width: 20px;
+  position: relative;
+  left: 72px;
+  text-align: center;
+  border-width: 0;
+  margin-top: 35px;
+}
+
+.left-leaf-num {
+  color: rgb(28, 100, 53);
+  font-size: 20px;
+  transform: rotate(20deg);
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+.flagged-left-leaf-num {
+  color: rgb(224, 76, 76);
+  font-size: 20px;
+  transform: rotate(20deg);
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+.right-leaf {
+  background-color: rgb(117, 143, 104);
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+  transform: rotate(110deg);
+  height: 50px;
+  width: 60px;
+  position: relative;
+  left: 100px;
+  text-align: center;
+  border-width: 0;
+}
+
+.right-leaf:hover {
+  cursor: pointer;
+}
+
+.open-right-leaf {
+  background: radial-gradient(farthest-corner at 15px -15px, rgb(195, 204, 149) 10%, rgb(117, 143, 104, 1) 90%);
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+  transform: rotate(110deg);
+  height: 50px;
+  width: 60px;
+  position: relative;
+  left: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.snipped-right-leaf {
+  background-color: rgb(117, 143, 104);
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  transform: rotate(110deg);
+  height: 15px;
+  width: 20px;
+  position: relative;
+  left: 103px;
+  text-align: center;
+  border-width: 0;
+  margin-top: 35px;
+}
+
+.right-leaf-num {
+  color: rgb(28, 100, 53);
+  font-size: 20px;
+  transform: rotate(-110deg);
+  position: relative;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  border-width: 0;
+}
+
+.snipped-leaf-num {
+  visibility: hidden;
+}
+
+.flagged-right-leaf-num {
+  color: rgb(224, 76, 76);
+  font-size: 20px;
+  transform: rotate(-110deg);
+  position: relative;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  border-width: 0;
+}
+
+.stem {
+  position: absolute;
+  bottom: 150px;
+  right: 95px;
+  background: #758f68;
+  width: 14px;
+  border-radius: 5px;
+}
