@@ -4,12 +4,12 @@ import './Planter.css'
 import LeafList from './LeafList.jsx'
 import NoteList from './NoteList.jsx'
 
-
-export default function Planter({ planterId, isOpen, title }) {
+//used in PlanterList
+export default function Planter({ planterId, isOpen, title, startNum }) {
   //local storage running count of leaves
   const [numLeaf, setNum] = useState(() => {
     const localValue = localStorage.getItem("NUM" + planterId)
-    if (localValue == null) return 0
+    if (localValue == null) return (startNum - 1)
     return JSON.parse(localValue)
   });
   useEffect(() => {
@@ -46,7 +46,6 @@ export default function Planter({ planterId, isOpen, title }) {
     localStorage.setItem("NOTES" + planterId, JSON.stringify(notes))
   }, [notes])
 
-
   function newLeaf() {
     setNum(numLeaf + 1);
     setHeight(stemHeight + 50);
@@ -62,7 +61,6 @@ export default function Planter({ planterId, isOpen, title }) {
       return [...currentNotes, { id: id, text: "", title: "Question #" + id, isOpen: false, isSnipped: false, isFlagged: false }];
     })
   }
-
 
   function popLeaf() {
     if (numLeaf > 0) {
@@ -177,9 +175,12 @@ export default function Planter({ planterId, isOpen, title }) {
 
 
   return <div className={isOpen ? "set" : "set--hidden"} >
-    <h2>{title}</h2>
+
+    <NoteList notes={notes} handleNoteContent={handleNoteContent} handleLeafSnipped={handleLeafSnipped} handleLeafFlagged={handleLeafFlagged} popLeaf={popLeaf} numLeaf={numLeaf} />
+    <div className="planter-title">{title}</div>
 
     <div className="pot">
+
       <img id="potImage" src="src/assets/pot.png" ></img>
       <button id="addLeaf" onClick={newLeaf}>+</button>
 
@@ -191,7 +192,6 @@ export default function Planter({ planterId, isOpen, title }) {
 
     </div>
 
-    <NoteList notes={notes} handleNoteContent={handleNoteContent} handleLeafSnipped={handleLeafSnipped} handleLeafFlagged={handleLeafFlagged} popLeaf={popLeaf} numLeaf={numLeaf} />
   </div>
 }
 

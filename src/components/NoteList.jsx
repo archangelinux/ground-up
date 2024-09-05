@@ -1,6 +1,6 @@
 import Note from "./Note.jsx"
 
-
+//used in Greenhouses
 export default function NoteList({ notes, handleNoteContent, popLeaf, numLeaf, handleLeafSnipped, handleLeafFlagged }) {
     return (
         notes.map(note => {

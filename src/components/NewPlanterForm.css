@@ -1,30 +1,28 @@
-select:focus, input:focus {
-    outline-color:#e1d8fb;
+input:focus {
+    outline-color: #e1d8fb;
     outline-style: solid;
 }
 
 .new-item-form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
 }
 
 .form-row {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 1px;
     width: 300px;
 }
-#name-planter-label{
+
+#name-planter-label {
     font-size: 20px;
     color: rgb(146, 134, 160);
-    font-weight:400;
+    font-weight: 400;
     margin-left: 50px;
     margin-top: 30px;
 }
-
-
-
 
 
 .new-planter {
@@ -32,19 +30,18 @@ select:focus, input:focus {
     height: 50px;
     width: 150px;
     border: none;
-    background-color: #c5b5ab;
-    color: rgb(161, 76, 10);
+    background-color: #bb784e;
+    color: #ffffff;
     font-size: 16px;
-    border-radius: 15px;
+    border-radius: 7px;
     margin: 50px;
     margin-bottom: 0;
-
     transition: 0.2s;
 }
 
 .new-planter:hover {
-    background-color: #bb784e;
-    color: #ffefe5;
+    background-color: #415d43;
+    color: #cfe1b9;
     transition: 0.4s;
     cursor: pointer;
 }
@@ -55,50 +52,50 @@ select:focus, input:focus {
     transition: 0.4s;
 }
 
-
 #name-planter {
     position: relative;
-    border-radius: 10px;
-    border-color: rgb(195, 177, 216);
+    border-color: rgb(178, 100, 57);
+    border-style: solid;
+    padding-left: 10px;
+    border-radius: 7px;
     background-color: transparent;
     height: 40px;
-    padding-left: 10px;
     margin-left: 50px;
-    font-weight: 300;
     font-size: 18px;
-    border-style: solid;
 }
 
 #name-planter::placeholder {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 18px;
     font-style: italic;
+    color: rgba(120, 147, 165, 0.646)
 }
 
-#starting-num{
-    position: relative;
-    border-bottom-color: rgb(202, 96, 39);
+#starting-num {
+    display: inline-block;
+    border-color: rgb(178, 100, 57);
     border-top-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent;
-
-
     background-color: transparent;
-    height: 40px;
-    padding-left: 10px;
-    margin-left: 50px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 12px;
     font-weight: 300;
     font-size: 18px;
     border-style: solid;
+    width: 50px;
 }
 
 #starting-num::placeholder {
     font-weight: 300;
     font-size: 18px;
     font-style: italic;
+    color: rgba(120, 147, 165, 0.646)
 }
-#starting-num-label{
-    position: relative;
+
+#starting-num-label {
+    display: inline-block;
     font-weight: 300;
     margin-left: 50px;
     margin-top: 20px;

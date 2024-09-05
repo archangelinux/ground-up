@@ -1,0 +1,53 @@
+.gh-button {
+    position: relative;
+    background-color: transparent;
+    height: 65px;
+    width: 80%;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 70px;
+    transition: 0.4s;
+    background-image: url(src/assets/greenhouse.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position-y: 7px;
+    background-position-x: 7px;
+    color: rgba(92, 118, 101, 0.894);
+    display: inline-block;
+}
+
+.button-div:hover {
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: rgba(255, 255, 255, 0.336);
+}
+
+.button-div {
+    border-radius: 35px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.136);
+    transition: 0.4s;
+    padding-right: 10px;
+    min-width: 450px;
+}
+
+.delete,
+.rename {
+    float: right;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    top: 20px;
+    margin-right: 20px
+}
+
+.delete:hover,
+.rename:hover {
+    animation: shake 0.5s;
+}
+
+.planter-count {}

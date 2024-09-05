@@ -1,8 +1,7 @@
 import PlanterButton from "./PlanterButton.jsx"
-//import {Reorder, useDragControls} from "framer-motion"
 
-export default function PlanterMenu({ planters, setPlanters, handlePlanterOpen }) {
-
+//used in Greenhouses
+export default function PlanterMenu({ planters, handlePlanterOpen, handleDeletePlanter }) {
     return (
         planters.map(planter => {
             return (<>
@@ -12,6 +11,7 @@ export default function PlanterMenu({ planters, setPlanters, handlePlanterOpen }
                     id={planter.id}
                     title={planter.title}
                     handlePlanterOpen={handlePlanterOpen}
+                    handleDeletePlanter={handleDeletePlanter}
                 />
             </>
             )

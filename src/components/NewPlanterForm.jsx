@@ -1,6 +1,8 @@
 import { useState } from "react"
 import "./NewPlanterForm.css"
 
+
+//used in Greenhouses
 export default function NewPlanterForm({ onSubmit }) {
     const [planterName, setPlanterName] = useState("")
     const [startAt, setStartAt] = useState(1)
@@ -8,7 +10,7 @@ export default function NewPlanterForm({ onSubmit }) {
     function handleSubmit(e) {
         e.preventDefault()
         if (planterName === "") return
-        onSubmit(planterName)
+        onSubmit(planterName, parseInt(startAt))
         setPlanterName("") //resets input
     }
 
@@ -17,32 +19,30 @@ export default function NewPlanterForm({ onSubmit }) {
             <div>
                 <form onSubmit={handleSubmit} className="new-planter-form">
                     <div className="form-row">
-                        <label id = "name-planter-label" htmlFor="name-planter">New Problem Set</label>
                         <input
                             value={planterName}
                             onChange={e => setPlanterName(e.target.value)}
                             type="text"
                             id="name-planter"
-                            placeholder="Untitled"
+                            placeholder="New Problem Set"
                         />
-                        <select id = "starting-num-label" htmlFor="starting-num">
-                            <option value = "startAt">Start at question #</option>
-                            <option value = "startRange">Start with a range</option>
-                        </select>
-                        <input 
+                    </div>
+                    <div className="form-row">
+                        <label id="starting-num-label" htmlFor="starting-num">
+                            Start at question #</label>
+                        <input
                             value={startAt}
                             onChange={e => setStartAt(e.target.value)}
                             type="text"
                             id="starting-num"
-                            placeholder= "1"
-                        
+                            placeholder="1"
                         />
 
                     </div>
                     <button className="new-planter">START NEW</button>
                 </form>
 
-               
+
             </div>
         </>
     )

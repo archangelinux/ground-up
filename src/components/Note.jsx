@@ -1,6 +1,8 @@
 import './Note.css'
 import React from 'react';
 
+
+//used in NoteList
 export default function Note({ id, title, text, isOpen, isFlagged, isSnipped, handleNoteContent, popLeaf, handleLeafSnipped, handleLeafFlagged, numLeaf }) {
 
     const flagLeaf = function () {
@@ -19,7 +21,7 @@ export default function Note({ id, title, text, isOpen, isFlagged, isSnipped, ha
 
     function handleFileUpload(e) {
         const target = e.target
-      }
+    }
 
     return <div className={(isOpen) ? "note" : "note--hidden"}>
         <h2>{title}</h2>
@@ -27,7 +29,6 @@ export default function Note({ id, title, text, isOpen, isFlagged, isSnipped, ha
         <button className={(id == numLeaf) ? "pop-leaf" : "pop-leaf--hidden"} onClick={popLeaf}>shrink</button>
         <button className="snip-leaf" onClick={isSnipped ? growLeaf : snipLeaf}>{isSnipped ? "grow" : "snip"}</button>
         <button className="flag-leaf" onClick={isFlagged ? unflagLeaf : flagLeaf}>{isFlagged ? "unflag" : "flag"}</button>
-        <input type = "file" name = "materials" onChange = {handleFileUpload}/>
     </div>
 
 }
