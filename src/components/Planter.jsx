@@ -133,7 +133,6 @@ export default function Planter({ planterId, isOpen, title, startNum }) {
       })
     })
   }
-
   function handleLeafFlagged(id, isFlagged) {
     setLeaves(currentLeaves => {
       return currentLeaves.map(leaf => {
@@ -175,23 +174,16 @@ export default function Planter({ planterId, isOpen, title, startNum }) {
 
 
   return <div className={isOpen ? "set" : "set--hidden"} >
-
     <NoteList notes={notes} handleNoteContent={handleNoteContent} handleLeafSnipped={handleLeafSnipped} handleLeafFlagged={handleLeafFlagged} popLeaf={popLeaf} numLeaf={numLeaf} />
     <div className="planter-title">{title}</div>
-
     <div className="pot">
-
       <img id="potImage" src="src/assets/pot.png" ></img>
       <button id="addLeaf" onClick={newLeaf}>+</button>
-
       <div id="plant">
         <div className="stem" style={{ height: stemHeight }}></div>
         <LeafList leaves={leaves} handleLeafOpen={handleLeafOpen} handleLeafSnipped={handleLeafSnipped} handleLeafFlagged={handleLeafFlagged} />
       </div>
-
-
     </div>
-
   </div>
 }
 

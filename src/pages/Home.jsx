@@ -36,6 +36,8 @@ export function Home() {
         localStorage.setItem("GREENHOUSES", JSON.stringify(ghs))
     }, [ghs])
 
+    const [inputDisabled, setInputDisabled] = useState(true)
+
     function newGreenhouse(title) {
         setGhs(currentGhs => {
             return [{
@@ -89,10 +91,12 @@ export function Home() {
                     <NewGreenhouseForm id="gh-form" onSubmit={newGreenhouse} />
                 </div>
                 <div className="menu">
-                    <GreenhouseMenu ghs={ghs} handleGhOpen={handleGhOpen} handleDeleteGh={handleDeleteGh} />
+                    <GreenhouseMenu ghs={ghs} handleGhOpen={handleGhOpen} handleDeleteGh={handleDeleteGh} inputDisabled = {inputDisabled} setInputDisabled = {setInputDisabled} />
                 </div>
             </div>
             <GreenhouseList ghs={ghs} handleGhOpen={handleGhOpen} back={back} />
+
         </>
+
     )
 }

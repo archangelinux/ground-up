@@ -22,8 +22,6 @@ export default function NewGreenhouseForm({ onSubmit }) {
                     className="name-gh"
                     placeholder="New Greenhouse"
                 />
-
-
                 <button className="new-gh">CREATE</button>
             </form>
 

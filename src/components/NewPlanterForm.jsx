@@ -37,12 +37,9 @@ export default function NewPlanterForm({ onSubmit }) {
                             id="starting-num"
                             placeholder="1"
                         />
-
                     </div>
                     <button className="new-planter">START NEW</button>
                 </form>
-
-
             </div>
         </>
     )
