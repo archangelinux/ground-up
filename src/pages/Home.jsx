@@ -4,6 +4,9 @@ import NewGreenhouseForm from '../components/NewGreenhouseForm.jsx'
 import GreenhouseMenu from '../components/GreenhouseMenu.jsx'
 import GreenhouseList from '../components/GreenhouseList.jsx'
 import './Home.css'
+import bigLogo from '../assets/bigLogo.png';
+
+
 
 export function Home() {
     const [homepageOpen, setHomepageOpen] = useState(() => {
@@ -85,7 +88,7 @@ export function Home() {
     return (
         <>
             <div className={homepageOpen ? "homepage" : "homepage--hidden"}>
-                <img id="big-logo" src="src/assets/bigLogo.png"></img>
+                <img id="big-logo" src={bigLogo} alt="Big Logo" />
                 <div className = "banner-form">
                     <h5>on the grind? plant some joy.</h5>
                     <NewGreenhouseForm id="gh-form" onSubmit={newGreenhouse} />
@@ -95,8 +98,6 @@ export function Home() {
                 </div>
             </div>
             <GreenhouseList ghs={ghs} handleGhOpen={handleGhOpen} back={back} />
-
         </>
-
     )
 }

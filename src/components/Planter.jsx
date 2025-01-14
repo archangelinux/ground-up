@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import './Planter.css'
 import LeafList from './LeafList.jsx'
 import NoteList from './NoteList.jsx'
+import potImage from '../assets/pot.png';
 
 //used in PlanterList
 export default function Planter({ planterId, isOpen, title, startNum }) {
@@ -177,7 +178,8 @@ export default function Planter({ planterId, isOpen, title, startNum }) {
     <NoteList notes={notes} handleNoteContent={handleNoteContent} handleLeafSnipped={handleLeafSnipped} handleLeafFlagged={handleLeafFlagged} popLeaf={popLeaf} numLeaf={numLeaf} />
     <div className="planter-title">{title}</div>
     <div className="pot">
-      <img id="potImage" src="src/assets/pot.png" ></img>
+      <img id="potImage" src={potImage} alt = "Image of pot" ></img>                
+      
       <button id="addLeaf" onClick={newLeaf}>+</button>
       <div id="plant">
         <div className="stem" style={{ height: stemHeight }}></div>

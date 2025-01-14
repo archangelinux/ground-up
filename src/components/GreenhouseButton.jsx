@@ -1,8 +1,8 @@
-
-import './GreenhouseButton.css'
-import './animations.css'
+import './GreenhouseButton.css';
+import './animations.css';
 import { useState } from 'react';
-
+import edit from '../assets/edit.png';
+import trash from '../assets/trash.png';
 
 //used in GreenhouseMenu
 export default function GreenhouseButton({ ghId, title, handleGhOpen, isOpen, handleDeleteGh, inputDisabled, setInputDisabled}) {
@@ -17,11 +17,11 @@ export default function GreenhouseButton({ ghId, title, handleGhOpen, isOpen, ha
     }
 
     function renameGh() {
-        setInputDisabled(false)
+        setInputDisabled(false);
     }
 
     function deleteGh() {
-        handleDeleteGh(ghId)
+        handleDeleteGh(ghId);
     }
 
     function handleInputKeyDown(event) {
@@ -42,8 +42,12 @@ export default function GreenhouseButton({ ghId, title, handleGhOpen, isOpen, ha
                         onKeyDown={handleInputKeyDown} // Save on Enter
                         autoFocus={!inputDisabled} />  
             </button>
-            <button className="delete" onClick={deleteGh}><img width="25" src="src/assets/trash.png"></img></button>
-            <button className="rename" onClick= {renameGh}><img width="25" src="src/assets/edit.png"></img></button>
+            <button className="delete" onClick={deleteGh}>
+                <img width="25" src={trash} alt = "Delete"></img>
+            </button>
+            <button className="rename" onClick= {renameGh}>
+                <img width="25" src={edit} alt = "Rename"></img>
+            </button>
         </div>
     </>
     )

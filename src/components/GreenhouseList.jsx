@@ -1,4 +1,4 @@
-import Greenhouse from "../pages/Greenhouse.jsx"
+import Greenhouse from "../pages/Greenhouse.jsx";
 
 //used in App
 export default function GreenhouseList({ ghs, handleGhOpen, back }) {
@@ -9,8 +9,7 @@ export default function GreenhouseList({ ghs, handleGhOpen, back }) {
     
     return (
         ghs.map(gh => {
-            return (
-                
+            return (    
                 <Greenhouse
                     {...gh}
                     key={gh.ghId}
@@ -18,7 +17,6 @@ export default function GreenhouseList({ ghs, handleGhOpen, back }) {
                     ghsId={gh.ghId}
                     handleGhOpen={handleGhOpen}
                     back={back} />
-
             )
         })
     )
