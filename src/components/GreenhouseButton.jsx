@@ -4,6 +4,9 @@ import { useState } from 'react';
 import edit from '../assets/edit.png';
 import trash from '../assets/trash.png';
 
+import greenhouseImage from '../assets/greenhouse.png';
+
+
 //used in GreenhouseMenu
 export default function GreenhouseButton({ ghId, title, handleGhOpen, isOpen, handleDeleteGh, inputDisabled, setInputDisabled}) {
     
@@ -36,7 +39,8 @@ export default function GreenhouseButton({ ghId, title, handleGhOpen, isOpen, ha
 
     return (<>
         <div className="button-div" >
-            <button className={isOpen ? "gh-button--open" : "gh-button"} onClick={isOpen ? closeGh : openGh} disabled = {!inputDisabled}>
+            <button className={isOpen ? "gh-button--open" : "gh-button"} onClick={isOpen ? closeGh : openGh} disabled = {!inputDisabled} 
+            style={{backgroundImage: `url(${greenhouseImage})`,}} >
                 <input className = "rename-input" placeholder = {title}  disabled = {inputDisabled} value={inputValue} // Controlled input value
                         onChange={handleInputChange} // Update state as user types
                         onKeyDown={handleInputKeyDown} // Save on Enter

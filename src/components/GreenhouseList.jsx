@@ -1,10 +1,10 @@
 import Greenhouse from "../pages/Greenhouse.jsx";
-
+import ghplaceholder from '../assets/greenhouse-placeholder.png';
 //used in App
 export default function GreenhouseList({ ghs, handleGhOpen, back }) {
     
     if(ghs.length == 0){
-        return(<img className = "gh-placeholder" src = "src/assets/greenhouse-placeholder.png"></img>)
+        return(<img className = "gh-placeholder" src = {ghplaceholder} ></img>)
     }
     
     return (

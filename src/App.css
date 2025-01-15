@@ -1,6 +1,7 @@
 * {
   font-family: "Noto Sans", sans-serif;
   font-weight: 900;
+
 }
 
 body {
@@ -11,6 +12,7 @@ body {
   height: 100vh;
   margin: auto;
   background-attachment: fixed;
+
 }
 
 .greenhouse {
@@ -34,9 +36,13 @@ body {
   margin-left: 50px;
   margin-top: 50px;
   align-content: flex-start;
-  overflow-y: scroll;
+  overflow-y: auto;
+}
+*::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar */
 }
 
 .set {
   position: fixed;
 }
+
