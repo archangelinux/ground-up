@@ -1,13 +1,12 @@
 .note {
-    position: relative;
+    position: fixed;
     padding: 30px;
-    left: 550px;
-    bottom: 60vh;
+    left: 73vh;
+    bottom: 5vh;
     border-radius: 35px;
-    height: 100%;
-    width: 300px;
+    height: 50%;
+    width: 30%;
     background-color: #b5c99a;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .note--hidden {
@@ -17,10 +16,12 @@
 .note-text {
     position: relative;
     background-color: #cfe1b9;
-    padding: 20px;
+    padding: 5%;
     height: 200px;
+    width: 90%;
     margin-right: 50px;
     resize: vertical;
+    max-height: 90%;
     font-weight: 400;
     font-size: 14px;
     color: #415d43;

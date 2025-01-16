@@ -199,13 +199,12 @@
   font-size: 30px;
   font-weight: 600;
   position: fixed;
-  top: 100px;
-  left: 550px;
-  background-color:rgba(141, 158, 172, 0.378);
+  top: 5vh;
+  left: 73vh;
+  width: 50%;
+  background: linear-gradient(to right, rgba(167, 183, 189, 0.88) 0%, rgba(195, 129, 85, 0) 100%);
   padding: 25px;
   padding-right: 50px;
   padding-left: 50px;
   border-radius: 25px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  margin-right:100px;
 }
