@@ -28,15 +28,19 @@ h5 {
 .menu {
     background-color: transparent;
     position: relative;
-    left: 20%;
+    left:50%;
+    transform: translate(-50%, 0);
     width: 60%;
     border-radius: 35px;
     padding: 40px;
+    min-width: 450px;
+
 }
 
 .banner-form{
     position: relative;
-    left: 20%;
+    left:50%;
+    transform: translate(-50%, 0);
     width: 60%;
     padding: 40px;
     margin-bottom: 50px;
@@ -47,6 +51,6 @@ h5 {
 
 .gh-placeholder{
     position: relative;
-    margin-left: 30%;
-    margin-top: -150px;
+    left:50%;
+    transform: translate(-50%, -30%);
 }
