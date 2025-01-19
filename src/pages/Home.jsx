@@ -74,6 +74,17 @@ export function Home() {
             return currentGhs.filter(gh => gh.ghId != ghId);
         })
     }
+    function handleRenameGh(ghId, title) {
+        setGhs(currentGhs => {
+            return currentGhs.map(gh => {
+                if (gh.ghId === ghId) {
+                    return { ...gh, title: title }
+                } else {
+                    return { ...gh }
+                }
+            })
+        })
+    }
 
     function back() {
         setHomepageOpen(true)

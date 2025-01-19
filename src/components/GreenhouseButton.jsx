@@ -8,7 +8,7 @@ import greenhouseImage from '../assets/greenhouse.png';
 
 
 //used in GreenhouseMenu
-export default function GreenhouseButton({ ghId, title, handleGhOpen, isOpen, handleDeleteGh, inputDisabled, setInputDisabled}) {
+export default function GreenhouseButton({ ghId, title, handleGhOpen, isOpen, handleDeleteGh, handleRenameGh, inputDisabled, setInputDisabled}) {
     
     const [inputValue, setInputValue] = useState(title); // Track the input value
 
@@ -20,7 +20,7 @@ export default function GreenhouseButton({ ghId, title, handleGhOpen, isOpen, ha
     }
 
     function renameGh() {
-        setInputDisabled(false);
+        handleRenameGh(ghId, title);
     }
 
     function deleteGh() {
