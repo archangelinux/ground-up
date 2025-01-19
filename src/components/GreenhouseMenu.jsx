@@ -1,7 +1,7 @@
 import GreenhouseButton from "./GreenhouseButton.jsx"
 
 //used in Home
-export default function GreenhouseMenu({ ghs, handleGhOpen, handleDeleteGh, inputDisabled, setInputDisabled }) {
+export default function GreenhouseMenu({ ghs, handleGhOpen, handleDeleteGh, inputDisabled, setInputDisabled, handleRenameGh }) {
 
     return (
         ghs.map(gh => {
@@ -13,6 +13,7 @@ export default function GreenhouseMenu({ ghs, handleGhOpen, handleDeleteGh, inpu
                     title={gh.title}
                     handleGhOpen={handleGhOpen}
                     handleDeleteGh={handleDeleteGh}
+                    handleRenameGh={handleRenameGh}
                     inputDisabled = {inputDisabled}
                     setInputDisabled = {setInputDisabled}
                 />

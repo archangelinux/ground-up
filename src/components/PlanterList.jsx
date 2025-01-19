@@ -1,7 +1,7 @@
 import Planter from "./Planter.jsx"
 
 //used in Greenhouses
-export default function PlanterList({ planters, handlePlanterOpen }) {
+export default function PlanterList({ planters, handlePlanterOpen, handleRenamePlanter }) {
     return (
         planters.map(planter => {
             return (
@@ -12,6 +12,7 @@ export default function PlanterList({ planters, handlePlanterOpen }) {
                     startNum={planter.startNum}
                     planterId={planter.id}
                     handlePlanterOpen={handlePlanterOpen}
+                    handleRenamePlanter= {handleRenamePlanter}
                 />
             )
         })

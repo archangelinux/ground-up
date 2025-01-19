@@ -1,20 +1,17 @@
-import { useState } from 'react'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import NewGreenhouseForm from '../components/NewGreenhouseForm.jsx'
 import GreenhouseMenu from '../components/GreenhouseMenu.jsx'
 import GreenhouseList from '../components/GreenhouseList.jsx'
 import './Home.css'
 import bigLogo from '../assets/bigLogo.png';
 
-
-
 export function Home() {
+
     const [homepageOpen, setHomepageOpen] = useState(() => {
         const localValue = localStorage.getItem("HP-OPEN")
         if (localValue == null) return (true)
         return JSON.parse(localValue)
     });
-
     useEffect(() => {
         localStorage.setItem("HP-OPEN", JSON.stringify(homepageOpen))
     }, [homepageOpen])
@@ -24,7 +21,6 @@ export function Home() {
         if (localValue == null) return (1)
         return JSON.parse(localValue)
     });
-
     useEffect(() => {
         localStorage.setItem("NUM-GH", JSON.stringify(numGh))
     }, [numGh])
@@ -34,7 +30,6 @@ export function Home() {
         if (localValue == null) return []
         return JSON.parse(localValue)
     })
-
     useEffect(() => {
         localStorage.setItem("GREENHOUSES", JSON.stringify(ghs))
     }, [ghs])
@@ -74,15 +69,17 @@ export function Home() {
             return currentGhs.filter(gh => gh.ghId != ghId);
         })
     }
+
     function handleRenameGh(ghId, title) {
         setGhs(currentGhs => {
-            return currentGhs.map(gh => {
+            const updatedGhs = currentGhs.map(gh => {
                 if (gh.ghId === ghId) {
                     return { ...gh, title: title }
                 } else {
                     return { ...gh }
                 }
             })
+            return updatedGhs;
         })
     }
 
@@ -100,15 +97,15 @@ export function Home() {
         <>
             <div className={homepageOpen ? "homepage" : "homepage--hidden"}>
                 <img id="big-logo" src={bigLogo} alt="Big Logo" />
-                <div className = "banner-form">
+                <div className="banner-form">
                     <h5>on the grind? plant some joy.</h5>
                     <NewGreenhouseForm id="gh-form" onSubmit={newGreenhouse} />
                 </div>
                 <div className="menu">
-                    <GreenhouseMenu ghs={ghs} handleGhOpen={handleGhOpen} handleDeleteGh={handleDeleteGh} inputDisabled = {inputDisabled} setInputDisabled = {setInputDisabled} />
+                    <GreenhouseMenu ghs={ghs} handleGhOpen={handleGhOpen} handleDeleteGh={handleDeleteGh} inputDisabled={inputDisabled} setInputDisabled={setInputDisabled} handleRenameGh={handleRenameGh} />
                 </div>
             </div>
-            <GreenhouseList ghs={ghs} handleGhOpen={handleGhOpen} back={back} />
+            <GreenhouseList ghs={ghs} handleGhOpen={handleGhOpen} back={back} handleRenameGh={handleRenameGh} />
         </>
     )
 }

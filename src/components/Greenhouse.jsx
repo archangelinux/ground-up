@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
+
 import './Greenhouse.css'
-import PlanterList from '../components/PlanterList.jsx';
-import NewPlanterForm from "../components/NewPlanterForm.jsx";
-import PlanterMenu from "../components/PlanterMenu.jsx";
+import PlanterList from './PlanterList.jsx';
+import NewPlanterForm from "./NewPlanterForm.jsx";
+import PlanterMenu from "./PlanterMenu.jsx";
 
 export default function Greenhouse({ ghsId, title, isOpen, back }) {
 
@@ -43,6 +45,18 @@ export default function Greenhouse({ ghsId, title, isOpen, back }) {
         })
     }
 
+    function handleRenamePlanter(id, title) {
+        setPlanters(currentPlanters => {
+            return currentPlanters.map(planter => {
+                if (planter.id === id) {
+                    return { ...planter, title: title }
+                } else {
+                    return { ...planter }
+                }
+            })
+        })
+    }
+
     function handleDeletePlanter(id) {
         setPlanters(currentPlanters => {
             return currentPlanters.filter(planter => planter.id !== id)
@@ -56,10 +70,10 @@ export default function Greenhouse({ ghsId, title, isOpen, back }) {
                 <h1>{title}</h1>
                 <NewPlanterForm onSubmit={newPlanter} />
                 <div id="garden">
-                    <PlanterMenu planters={planters} handlePlanterOpen={handlePlanterOpen} handleDeletePlanter={handleDeletePlanter} />
+                    <PlanterMenu planters={planters} handlePlanterOpen={handlePlanterOpen} handleDeletePlanter={handleDeletePlanter} handleRenamePlanter={handleRenamePlanter} />
                 </div>
             </div>
-            <PlanterList planters={planters} handlePlanterOpen={handlePlanterOpen} />
+            <PlanterList planters={planters} handlePlanterOpen={handlePlanterOpen} handleRenamePlanter={handleRenamePlanter} />
         </div>
 
     )

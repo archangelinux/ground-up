@@ -202,9 +202,13 @@
   top: 5vh;
   left: 73vh;
   width: 50%;
+  margin-right: 10%;
+  overflow: hidden; 
+  text-overflow: ellipsis; /* Add ellipsis for truncated text */
   background: linear-gradient(to right, rgba(198, 214, 194, 0.88) 0%, rgba(195, 129, 85, 0) 100%);
   padding: 25px;
   padding-right: 50px;
   padding-left: 50px;
   border-radius: 25px;
+
 }

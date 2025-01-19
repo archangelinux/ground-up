@@ -50,14 +50,22 @@
     animation: shake 0.5s;
 }
 .rename-input:disabled {
-    pointer-events: none; /* Allow clicks to pass through to the button */
-    background-color: transparent; /* Optional: Make it visually blend into the button */
-    border: none; /* Optional: Hide the border for a cleaner look */
-    cursor: pointer; /* Optional: Match the button's pointer style */
-}
-.rename_input{
-    background-color: transparent;
-    border: none;
+    pointer-events: none; 
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+    box-shadow: none;
+    text-overflow: ellipsis; 
+
 }
 
-.planter-count {}
+.rename-input {
+    border: 2px solid #ecffe9;
+    border-radius: 7px;
+    box-shadow: 0 0 10px #9ecaed;
+    background-color: transparent;
+    border-radius: 4px; 
+    padding: 6px;
+    width: 100%;
+    box-sizing: border-box; 
+}

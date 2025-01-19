@@ -1,7 +1,7 @@
 import PlanterButton from "./PlanterButton.jsx"
 
 //used in Greenhouses
-export default function PlanterMenu({ planters, handlePlanterOpen, handleDeletePlanter }) {
+export default function PlanterMenu({ planters, handlePlanterOpen, handleDeletePlanter, handleRenamePlanter}) {
     return (
         planters.map(planter => {
             return (<>
@@ -12,6 +12,7 @@ export default function PlanterMenu({ planters, handlePlanterOpen, handleDeleteP
                     title={planter.title}
                     handlePlanterOpen={handlePlanterOpen}
                     handleDeletePlanter={handleDeletePlanter}
+                    handleRenamePlanter={handleRenamePlanter}
                 />
             </>
             )
